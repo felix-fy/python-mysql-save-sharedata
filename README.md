@@ -1,4 +1,4 @@
-# python-mysql-save-sharedata
+# python-save-sharedata
 ## 这是一个使用新浪行情接口读取数据保存并进行展示、分析的工程
 1.使用python3语言编写程序保存数据。   
 2.使用mariadb容器作为数据库存储。   
