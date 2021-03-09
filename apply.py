@@ -34,7 +34,7 @@ def JudgeDate ():
         time.sleep(RESIDUE_TIME)
         JudgeDate ()
         
- def JudgeTime ():
+def JudgeTime ():
     NOW_TIME_HUER = int(NOW_TIMES.strftime('%H'))
     NOW_TIME_MIN = int(NOW_TIMES.strftime('%M'))
     NOW_TIME_SEC = datetime.timedelta(hours=NOW_TIME_HUER,minutes=NOW_TIME_MIN).seconds
@@ -51,7 +51,7 @@ def JudgeDate ():
         time.sleep(RESIDUE_TIME)
         JudgeDate ()
         
- def WriteIndex ():
+def WriteIndex ():
     TIMESTAMP = int(time.mktime(NOW_TIMES.timetuple()))
     INDEX_CODE = 'sz300059'
     URL = ('http://hq.sinajs.cn/list=%s' % (INDEX_CODE))
