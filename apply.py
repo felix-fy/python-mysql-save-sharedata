@@ -69,3 +69,9 @@ def WriteIndex ():
     print (TIMESTAMP,INDEX_CODE,OPEN_PRICE,NOW_PRICE,HIGH_PRICE,LOW_PRICE,TURNOVER)
     time.sleep(2)
     JudgeTime ()
+    
+def main ():
+    print ("stock")
+
+if __name__ == '__main__':
+    main()
