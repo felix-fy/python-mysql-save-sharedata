@@ -1,0 +1,972 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "limit": 100,
+        "name": "Annotations & Alerts",
+        "showIn": 0,
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "share_index",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {},
+          "decimals": 2,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(147, 5, 24, 0.87)",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 0,
+        "y": 0
+      },
+      "id": 30,
+      "interval": "",
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value_and_name"
+      },
+      "pluginVersion": "7.3.7",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  TIMESTAMP AS \"time\",\n  OPEN_PRICE AS \"OPEN：\"\nFROM sz300059\nWHERE\n  $__unixEpochFilter(TIMESTAMP)\nORDER BY TIMESTAMP",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "NOW_PRICE"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "sz300059",
+          "timeColumn": "TIMESTAMP",
+          "timeColumnType": "int",
+          "where": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "datasource": "share_index",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {},
+          "decimals": 2,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(147, 5, 24, 0.87)",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 2,
+        "y": 0
+      },
+      "id": 28,
+      "interval": "",
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value_and_name"
+      },
+      "pluginVersion": "7.3.7",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  TIMESTAMP AS \"time\",\n  HIGH_PRICE AS \"HIGH：\"\nFROM sz300059\nWHERE\n  $__unixEpochFilter(TIMESTAMP)\nORDER BY TIMESTAMP",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "NOW_PRICE"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "sz300059",
+          "timeColumn": "TIMESTAMP",
+          "timeColumnType": "int",
+          "where": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "datasource": "share_index",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {},
+          "decimals": 2,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(147, 5, 24, 0.87)",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 4,
+        "y": 0
+      },
+      "id": 32,
+      "interval": "",
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value_and_name"
+      },
+      "pluginVersion": "7.3.7",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  TIMESTAMP AS \"time\",\n  LOW_PRICE AS \"LOW：\"\nFROM sz300059\nWHERE\n  $__unixEpochFilter(TIMESTAMP)\nORDER BY TIMESTAMP",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "NOW_PRICE"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "sz300059",
+          "timeColumn": "TIMESTAMP",
+          "timeColumnType": "int",
+          "where": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "bgColor": "rgba(110, 3, 18, 0.63)",
+      "clockType": "custom",
+      "countdownSettings": {
+        "customFormat": null,
+        "endCountdownTime": "2021-01-16T15:43:00.000Z",
+        "endText": "00:00:00"
+      },
+      "datasource": "share_index",
+      "dateSettings": {
+        "dateFormat": "YYYY/MM/DD",
+        "fontSize": "22px",
+        "fontWeight": "normal",
+        "showDate": true
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 12,
+        "x": 6,
+        "y": 0
+      },
+      "id": 4,
+      "links": [],
+      "mode": "time",
+      "options": {
+        "bgColor": "rgb(92, 3, 11)",
+        "clockType": "custom",
+        "countdownSettings": {
+          "endCountdownTime": "2021-01-20T16:56:07+08:00",
+          "endText": "00:00:00"
+        },
+        "dateSettings": {
+          "dateFormat": "YYYY-MM-DD",
+          "fontSize": "20px",
+          "fontWeight": "normal",
+          "showDate": true
+        },
+        "mode": "time",
+        "timeSettings": {
+          "customFormat": "HH : mm : ss",
+          "fontSize": "48px",
+          "fontWeight": "normal"
+        },
+        "timezone": "",
+        "timezoneSettings": {
+          "fontSize": "12px",
+          "fontWeight": "normal",
+          "showTimezone": false,
+          "zoneFormat": "offsetAbbv"
+        }
+      },
+      "refreshSettings": {
+        "syncWithDashboard": false
+      },
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  UNIX_TIMESTAMP(<time_column>) as time_sec,\n  <value column> as value,\n  <series name column> as metric\nFROM <table name>\nWHERE $__timeFilter(time_column)\nORDER BY <time_column> ASC\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeSettings": {
+        "customFormat": "* HH : mm : ss *",
+        "fontSize": "48px",
+        "fontWeight": "normal"
+      },
+      "timeShift": null,
+      "timezone": "Asia/Shanghai",
+      "timezoneSettings": {
+        "fontSize": "12px",
+        "fontWeight": "normal",
+        "showTimezone": false,
+        "zoneFormat": "offsetAbbv"
+      },
+      "title": "",
+      "type": "grafana-clock-panel"
+    },
+    {
+      "datasource": "share_index",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {},
+          "decimals": 2,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(147, 5, 24, 0.87)",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 18,
+        "y": 0
+      },
+      "id": 36,
+      "interval": "",
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value_and_name"
+      },
+      "pluginVersion": "7.3.7",
+      "repeat": null,
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT NOW_PRICE AS \"LAST: \" FROM sz300059 WHERE TIME LIKE '%14:56:5%' order by TIMESTAMP desc LIMIT 1",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "NOW_PRICE"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "sz300059",
+          "timeColumn": "TIMESTAMP",
+          "timeColumnType": "int",
+          "where": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transformations": [],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": "share_index",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {},
+          "decimals": 2,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(147, 5, 24, 0.87)",
+                "value": null
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 20,
+        "y": 0
+      },
+      "id": 26,
+      "interval": "",
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value_and_name"
+      },
+      "pluginVersion": "7.3.7",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT (T2.ca - T1.co) / T2.ca * 100 AS \"UP/DOWN： \"\r\nfrom\r\n(SELECT NOW_PRICE AS co FROM sz300059 WHERE TIME LIKE '%14:56:5%' order by TIMESTAMP desc LIMIT 1 )T1,\r\n(SELECT NOW_PRICE AS ca FROM sz300059 WHERE TIMESTAMP = (SELECT max(TIMESTAMP) FROM sz300059))T2",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "NOW_PRICE"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "sz300059",
+          "timeColumn": "TIMESTAMP",
+          "timeColumnType": "int",
+          "where": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transformations": [],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": "share_index",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {},
+          "decimals": 2,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(147, 5, 24, 0.87)",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 22,
+        "y": 0
+      },
+      "id": 24,
+      "interval": "",
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value_and_name"
+      },
+      "pluginVersion": "7.3.7",
+      "repeat": null,
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  TIMESTAMP AS \"time\",\n  NOW_PRICE AS \"NOW: \"\nFROM sz300059\nWHERE\n  $__unixEpochFilter(TIMESTAMP)\nORDER BY TIMESTAMP",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "NOW_PRICE"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "sz300059",
+          "timeColumn": "TIMESTAMP",
+          "timeColumnType": "int",
+          "where": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transformations": [],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "aliasColors": {
+        "AVERAGE_PRICE": "rgba(242, 204, 12, 0.5)",
+        "MEDIAN_PRICE": "rgba(255, 166, 176, 0.59)",
+        "NOW_PRICE": "rgb(224, 0, 4)",
+        "SZ300059": "red",
+        "value": "red"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "share_index",
+      "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 2,
+      "gridPos": {
+        "h": 17,
+        "w": 24,
+        "x": 0,
+        "y": 3
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": false,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": false
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:718",
+          "alias": "NOW_PRICE",
+          "yaxis": 1
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  TIMESTAMP AS \"time\",\n  NOW_PRICE\nFROM sz300059\nWHERE\n  $__unixEpochFilter(TIMESTAMP)\nORDER BY TIMESTAMP",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "NOW_PRICE"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "sz300059",
+          "timeColumn": "TIMESTAMP",
+          "timeColumnType": "int",
+          "where": [
+            {
+              "name": "$__unixEpochFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  TIMESTAMP AS \"time\",\n  MEDIAN_PRICE\nFROM sz300059\nWHERE\n  $__unixEpochFilter(TIMESTAMP)\nORDER BY TIMESTAMP",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "MEDIAN_PRICE"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "sz300059",
+          "timeColumn": "TIMESTAMP",
+          "timeColumnType": "int",
+          "where": [
+            {
+              "name": "$__unixEpochFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  TIMESTAMP AS \"time\",\n  AVERAGE_PRICE\nFROM sz300059\nWHERE\n  $__unixEpochFilter(TIMESTAMP)\nORDER BY TIMESTAMP",
+          "refId": "C",
+          "select": [
+            [
+              {
+                "params": [
+                  "AVERAGE_PRICE"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "sz300059",
+          "timeColumn": "TIMESTAMP",
+          "timeColumnType": "int",
+          "where": [
+            {
+              "name": "$__unixEpochFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [
+        {
+          "$$hashKey": "object:749",
+          "colorMode": "background6",
+          "fill": true,
+          "fillColor": "rgba(234, 112, 112, 0.12)",
+          "line": false,
+          "lineColor": "rgba(237, 46, 24, 0.60)",
+          "op": "time"
+        }
+      ],
+      "timeShift": null,
+      "title": "",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:731",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        },
+        {
+          "$$hashKey": "object:732",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "DIFFERENCE": "rgb(191, 0, 23)"
+      },
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "share_index",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 20
+      },
+      "hiddenSeries": false,
+      "id": 34,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": false
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": false,
+          "rawSql": "SELECT\n  TIMESTAMP AS \"time\",\n  DIFFERENCE\nFROM sz300059\nWHERE\n  $__unixEpochFilter(TIMESTAMP)\nORDER BY TIMESTAMP",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "DIFFERENCE"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "sz300059",
+          "timeColumn": "TIMESTAMP",
+          "timeColumnType": "int",
+          "where": [
+            {
+              "name": "$__unixEpochFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:331",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        },
+        {
+          "$$hashKey": "object:332",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "2021-02-16T04:58:10.000Z",
+    "to": "2021-02-16T06:56:43.000Z"
+  },
+  "timepicker": {
+    "hidden": false,
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "4h"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "Stock Dashboard",
+  "uid": "4Yyc8xIWz",
+  "version": 107
+}
