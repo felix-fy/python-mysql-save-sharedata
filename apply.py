@@ -5,6 +5,7 @@ import urllib.request
 import pymysql
 import tensorflow
 
+# Database connect and data insert.
 def MysqlOpen (SQL):
     DB = pymysql.connect(host='127.0.0.1',user='root',password='123456',db='share_index')
     CURSOR = DB.cursor()
@@ -13,7 +14,8 @@ def MysqlOpen (SQL):
     BUSS_DATE = CURSOR.fetchone()
     DB.close()
     return BUSS_DATE
-  
+
+# matching now date whether judge date.
 def JudgeDate ():
     global NOW_TIMES
     NOW_TIMES = datetime.datetime.now()
@@ -23,7 +25,7 @@ def JudgeDate ():
     NOW_TIME = NOW_TIMES.strftime('%H:%M:%S')
     NOW_TIME_HUER = int(NOW_TIMES.strftime('%H'))
     NOW_TIME_MIN = int(NOW_TIMES.strftime('%M'))
-    SQL = "SELECT * FROM xxx WHERE %s' % (NOW_DATE))"
+    SQL = "SELECT DATE FROM xxx WHERE DATE = %s' % (NOW_DATE))"
     BUSS_DATE = MysqlOpen (SQL) 
     if BUSS_DATE is not None:
         JudgeTime ()
@@ -34,6 +36,7 @@ def JudgeDate ():
         time.sleep(RESIDUE_TIME)
         JudgeDate ()
         
+# matching now time whether judge time.
 def JudgeTime ():
     NOW_TIME_HUER = int(NOW_TIMES.strftime('%H'))
     NOW_TIME_MIN = int(NOW_TIMES.strftime('%M'))
@@ -51,6 +54,7 @@ def JudgeTime ():
         time.sleep(RESIDUE_TIME)
         JudgeDate ()
         
+# gain stock data.
 def WriteIndex ():
     TIMESTAMP = int(time.mktime(NOW_TIMES.timetuple()))
     INDEX_CODE = 'sz300059'
@@ -64,14 +68,14 @@ def WriteIndex ():
     LOW_PRICE = (REP)[5]
     TURNOVER = (REP)[8]
     SQL = "INSERT INTO sz300059(DATE,TIME,TIMESTAMP,INDEX_CODE,OPEN_PRICE,NOW_PRICE,HIGH_PRICE,LOW_PRICE,TURNOVER) VALUES (%s,'%s',%s,'%s',%s,%s,%s,%s,%s)" % (NOW_DATE,NOW_TIME,TIMESTAMP,INDEX_CODE,OPEN_PRICE,NOW_PRICE,HIGH_PRICE,LOW_PRICE,TURNOVER)
-    DD = MysqlOpen (SQL)
-    print (DD)
+    WriteData = MysqlOpen (SQL)
+    print (WriteData)
     print (TIMESTAMP,INDEX_CODE,OPEN_PRICE,NOW_PRICE,HIGH_PRICE,LOW_PRICE,TURNOVER)
     time.sleep(2)
     JudgeTime ()
     
 def main ():
-    print ("stock")
+    JudgeDate ()
 
 if __name__ == '__main__':
     main()
