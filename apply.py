@@ -2,8 +2,10 @@
 # -*- coding: UTF-8 -*-
 import time, datetime
 import urllib.request
+import tushare
 import pymysql
 import tensorflow
+
 
 # Database connect and data insert.
 def MysqlOpen (SQL):
