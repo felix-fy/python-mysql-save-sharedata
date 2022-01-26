@@ -4,7 +4,8 @@ import time, datetime
 import urllib.request
 import tushare
 import pymysql
-import tensorflow
+import tensorflow as tf
+import numpy as np
 
 
 # Database connect and data insert.
