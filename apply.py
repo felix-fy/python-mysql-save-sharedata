@@ -69,12 +69,21 @@ def WriteIndex ():
     HIGH_PRICE = (REP)[4]
     LOW_PRICE = (REP)[5]
     TURNOVER = (REP)[8]
-    SQL = "INSERT INTO sz300059(DATE,TIME,TIMESTAMP,INDEX_CODE,OPEN_PRICE,NOW_PRICE,HIGH_PRICE,LOW_PRICE,TURNOVER) VALUES (%s,'%s',%s,'%s',%s,%s,%s,%s,%s)" % (NOW_DATE,NOW_TIME,TIMESTAMP,INDEX_CODE,OPEN_PRICE,NOW_PRICE,HIGH_PRICE,LOW_PRICE,TURNOVER)
+    SQL = "INSERT INTO sz300059(DATE,TIME,TIMESTAMP,INDEX_CODE,OPEN_PRICE,NOW_PRICE,HIGH_PRICE,LOW_PRICE,TURNOVER) \
+           VALUES (%s,'%s',%s,'%s',%s,%s,%s,%s,%s)" % \
+           (NOW_DATE,NOW_TIME,TIMESTAMP,INDEX_CODE,OPEN_PRICE,NOW_PRICE,HIGH_PRICE,LOW_PRICE,TURNOVER)
     WriteData = MysqlOpen (SQL)
     print (WriteData)
     print (TIMESTAMP,INDEX_CODE,OPEN_PRICE,NOW_PRICE,HIGH_PRICE,LOW_PRICE,TURNOVER)
     time.sleep(2)
     JudgeTime ()
+   
+# data analysis and trend prediction
+def Prediction ():
+    SQL = ""
+    WriteData = MysqlOpen (SQL)
+    print (WriteData)
+    
     
 def main ():
     JudgeDate ()
